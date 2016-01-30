@@ -15,7 +15,7 @@ func _process(delta):
 	anim.track_set_key_value(1,2,initpos)
 	if(startTime>0.5):
 		startTime=0
-		if(int(self.get_name()) == (randi() % 17)):
+		if(int(self.get_name()) == (randi() % 16)):
 			self.get_node("AnimationPlayer").play("frogAnim")
 	else:
 		startTime+=delta
