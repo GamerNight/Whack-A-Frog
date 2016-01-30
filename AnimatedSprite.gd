@@ -9,7 +9,6 @@ func _ready():
 	pass
 
 func _process(delta):
-	print(initpos)
 	var anim=get_node("AnimationPlayer").get_animation("frogAnim")
 	anim.track_set_key_value(1,0,initpos)
 	anim.track_set_key_value(1,1,Vector2(initpos.x,initpos.y-100))
@@ -20,5 +19,3 @@ func _process(delta):
 			self.get_node("AnimationPlayer").play("frogAnim")
 	else:
 		startTime+=delta
-
-
